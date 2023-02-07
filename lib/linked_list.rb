@@ -22,4 +22,14 @@ class LinkedList
 
     return data
   end
+
+  def empty
+    if @head == nil
+      empty = true
+    else 
+      empty = false
+    end
+  end
+
+  
 end
