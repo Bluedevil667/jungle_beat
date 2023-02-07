@@ -100,5 +100,21 @@ class LinkedList
     return found.chomp
   end
   
-  
+  def pop
+    if @head == nil
+      return
+    elsif @head.next_node.nil?
+      element_to_return = @head.data
+      @head = nil
+      element_to_return
+    else
+      current_node = @head
+      until current_node.next_node.next_node.nil?
+        current_node = current_node.next_node
+      end
+      data_to_pop = current_node.next_node.data
+      current_node.next_node = nil           
+      return data_to_pop
+    end
+  end
 end
