@@ -36,5 +36,7 @@ class JungleBeat
     @rate = 300
   end
 
-  
+  def reset_voice
+    @voice = "Daniel"
+  end
 end
