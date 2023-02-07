@@ -31,5 +31,17 @@ class LinkedList
     end
   end
 
+  def prepend(data)
+    node = Node.new(data)
+
+    if empty == true
+      @head = node
+    else
+      @next_node = @head
+      @head = node
+    end
+    return data
+  end
+
   
 end
