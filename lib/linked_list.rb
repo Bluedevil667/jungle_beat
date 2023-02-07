@@ -54,5 +54,16 @@ class LinkedList
     count
   end
 
+  def to_string
+    return "" if @head == nil
+    current_node = head
+    nodes = [current_node.data]
+    while current_node.next_node != nil
+      current_node = current_node.next_node
+      nodes << current_node.data
+    end
+    nodes.join(" ")
+  end
+
   
 end
