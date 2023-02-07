@@ -22,5 +22,15 @@ class JungleBeat
     list.count
   end
 
+  def play
+    puts "Listen to this..."
+    `say -r #{rate} -v #{voice} #{list.to_string}`
+    if list.count < 3
+      return "That was good!"
+    else
+      return "That sounded great!"
+    end
+  end
+
   
 end
