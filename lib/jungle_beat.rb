@@ -18,5 +18,9 @@ class JungleBeat
     return data
   end
 
+  def count
+    list.count
+  end
+
   
 end
