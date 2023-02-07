@@ -11,5 +11,12 @@ class JungleBeat
     @voice = "Daniel"
   end
 
+  def append(data)
+    data.split.each do |sound|
+      list.append(sound)
+    end
+    return data
+  end
+
   
 end
