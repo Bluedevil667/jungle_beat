@@ -83,5 +83,22 @@ class LinkedList
     return data
   end
 
+  def find(position, number_of_elements)
+    count = 0
+    current_node = @head
+    until count == position
+      current_node = current_node.next_node
+      count += 1
+    end
+    found = ""
+    count = 0
+    until count == number_of_elements
+      count += 1
+      found << current_node.data + " "
+      current_node = current_node.next_node
+    end
+    return found.chomp
+  end
+  
   
 end
